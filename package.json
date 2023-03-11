@@ -14,11 +14,15 @@
     "@react-three/drei": "^9.57.0",
     "@react-three/fiber": "^8.11.9",
     "@types/three": "^0.149.0",
+    "lodash": "^4.17.21",
+    "mobx": "^6.8.0",
+    "mobx-react-lite": "^3.4.3",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "three": "^0.150.1"
   },
   "devDependencies": {
+    "@types/lodash": "^4.14.191",
     "@types/react": "^18.0.27",
     "@types/react-dom": "^18.0.10",
     "@vitejs/plugin-react": "^3.1.0",
