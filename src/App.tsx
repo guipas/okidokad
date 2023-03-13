@@ -16,7 +16,7 @@ import _ from 'lodash';
 
 const thing = {
   "type": "transforms.translate",
-  "params": [[0, 0, 0]],
+  "params": [[1, 0, 0]],
   children: [
     {
       "type": "booleans.subtract",
@@ -29,8 +29,25 @@ const thing = {
           "type": "primitives.cylinder",
           height: 2,
           radius: 0.5,
+        },
+        {
+          "type": "transforms.translate",
+          "params": [[0, 0, 0.25]],
+          children: [
+            {
+              "type": "transforms.rotate",
+              "params": [[Math.PI / 2, 0, 0]],
+              children: [
+                {
+                  "type": "primitives.cylinder",
+                  height: 2,
+                  radius: 0.25,
+                
+                }
+              ]
+            }
+          ]
         }
-
       ],
     },
   ]
@@ -78,6 +95,7 @@ function App() {
      <Canvas style={{ height: '100vh' }}>
         <OrbitControls />
         <ambientLight />
+        <axesHelper/>
         <Test />
         <Grid infiniteGrid fadeDistance={10}/>
      </Canvas>
